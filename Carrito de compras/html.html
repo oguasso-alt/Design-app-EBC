@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Perfumes Exclusivos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css 1/css.css">
+</head>
+
+<body class="bg-light">
+
+<!-- HERO -->
+<section class="hero text-white text-center d-flex align-items-center justify-content-center mb-4">
+  <div class="container">
+    <h1 class="display-4">Descubre el Aroma del Lujo</h1>
+    <p class="lead">Explora nuestra colección exclusiva de perfumes premium.</p>
+    <a href="#productos" class="btn btn-primary btn-lg">Ver Perfumes</a>
+  </div>
+</section>
+
+<!-- CONTENEDOR DE PRODUCTOS -->
+<div class="container py-4" id="productos">
+  <h1 class="text-center mb-4">Perfumes Exclusivos</h1>
+
+  <div class="row">
+    <!-- Productos -->
+    <div class="col-md-8">
+      <div class="row g-3">
+        <!-- Card Perfume 1 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="IMG/Chanel.jpg" class="card-img-top producto-img" alt="Chanel No.5">
+            <div class="card-body">
+              <h5 class="card-title">Chanel No.5</h5>
+              <button class="btn btn-lujo w-100" onclick="agregarProducto('Chanel No.5')">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card Perfume 2 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="IMG/Dior.jpg" class="card-img-top producto-img" alt="Dior Sauvage">
+            <div class="card-body">
+              <h5 class="card-title">Dior Sauvage</h5>
+              <button class="btn btn-lujo w-100" onclick="agregarProducto('Dior Sauvage')">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card Perfume 3 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="IMG/Gucci.jpg" class="card-img-top producto-img" alt="Gucci Bloom">
+            <div class="card-body">
+              <h5 class="card-title">Gucci Bloom</h5>
+              <button class="btn btn-lujo w-100" onclick="agregarProducto('Gucci Bloom')">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card Perfume 4 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="IMG/Eros.jpg" class="card-img-top producto-img" alt="Versace Eros">
+            <div class="card-body">
+              <h5 class="card-title">Versace Eros</h5>
+              <button class="btn btn-lujo w-100" onclick="agregarProducto('Versace Eros')">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card Perfume 5 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="IMG/Armani.jpg" class="card-img-top producto-img" alt="Armani Si">
+            <div class="card-body">
+              <h5 class="card-title">Armani Si</h5>
+              <button class="btn btn-lujo w-100" onclick="agregarProducto('Armani Si')">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card Perfume 6 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="IMG/YS.jpg" class="card-img-top producto-img" alt="YSL Libre">
+            <div class="card-body">
+              <h5 class="card-title">YSL Libre</h5>
+              <button class="btn btn-lujo w-100" onclick="agregarProducto('YSL Libre')">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card Perfume 7 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="IMG/Tomford.jpg" class="card-img-top producto-img" alt="Tom Ford Black Orchid">
+            <div class="card-body">
+              <h5 class="card-title">Tom Ford Black Orchid</h5>
+              <button class="btn btn-lujo w-100" onclick="agregarProducto('Tom Ford Black Orchid')">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card Perfume 8 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="IMG/Boss.jpg" class="card-img-top producto-img" alt="Hugo Boss Bottled">
+            <div class="card-body">
+              <h5 class="card-title">Hugo Boss Bottled</h5>
+              <button class="btn btn-lujo w-100" onclick="agregarProducto('Hugo Boss Bottled')">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card Perfume 9 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="IMG/paco.jpg" class="card-img-top producto-img" alt="Paco Rabanne Invictus">
+            <div class="card-body">
+              <h5 class="card-title">Paco Rabanne Invictus</h5>
+              <button class="btn btn-lujo w-100" onclick="agregarProducto('Paco Rabanne Invictus')">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card Perfume 10 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="IMG/Lancome.jpg" class="card-img-top producto-img" alt="Lancôme La Vie Est Belle">
+            <div class="card-body">
+              <h5 class="card-title">Lancôme La Vie Est Belle</h5>
+              <button class="btn btn-lujo w-100" onclick="agregarProducto('Lancôme La Vie Est Belle')">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carrito -->
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header bg-dark text-white">Carrito</div>
+        <ul class="list-group list-group-flush" id="lista-carrito">
+          <li class="list-group-item text-muted text-center">No hay perfumes</li>
+        </ul>
+        <div class="card-footer text-center">
+          <button class="btn btn-eliminar" onclick="eliminarProducto()">Eliminar último perfume</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="JS/script.js"></script>
+</body>
+</html>

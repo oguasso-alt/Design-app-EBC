@@ -1,0 +1,114 @@
+/* Imagenes de los productos (perfumes) con tamaño uniforme */
+.producto-img {
+  width: 100%;
+  height: 250px; /* todas las imágenes del catálogo igual altura */
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Botón de lujo */
+.btn-lujo {
+  background: linear-gradient(135deg, #bfa05a, #ffd700);
+  color: #1c1c1c;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 2px solid #bfa05a;
+  transition: 0.4s;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+}
+
+.btn-lujo:hover {
+  background: linear-gradient(135deg, #ffd700, #bfa05a);
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Botón eliminar */
+.btn-eliminar {
+  background-color: #1c1c1c;
+  color: #ffd700;
+  font-weight: bold;
+  border-radius: 50px;
+  border: 2px solid #ffd700;
+  transition: 0.3s;
+}
+
+.btn-eliminar:hover {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Animaciones agregado/eliminado */
+.agregado {
+  background-color: #fffbea !important; /* dorado suave */
+  color: #bfa05a !important;
+  animation: fade 1s ease-in-out;
+}
+
+.eliminado {
+  background-color: #fdf5e6 !important; /* crema elegante */
+  color: #a67c00 !important;
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+/* HERO (header) con imagen grande, distinta a las del catálogo */
+.hero {
+  position: relative;
+  height: 55vh;
+  background-image: url('../IMG/FONDO.jpg'); 
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 15px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 28, 28, 0.5);
+  border-radius: 15px;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Títulos y textos elegantes */
+h1, h5, .lead {
+  font-family: 'Garamond', serif;
+}
+h1 {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+h5 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.lead {
+  font-size: 1.2rem;
+} 

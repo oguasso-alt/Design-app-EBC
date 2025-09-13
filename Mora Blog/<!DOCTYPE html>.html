@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Blog de Mora">
+  <meta name="copyright" content="©️ 2025 Mora Blog">
+  <title>Mora Blog</title>
+
+  <!-- Fuentes y iconos -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Open+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+  <div class="social-icons">
+   
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/mora/" target="_blank">
+      <i class="fa fa-instagram"></i>
+    </a>
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/channel/UCv0Gdfwyin6w3vbpZnEpmrQ" target="_blank">
+      <i class="fa fa-youtube"></i>
+    </a>
+    <!-- Twitter (X) -->
+    <a href="https://x.com/_morapr" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+  </div>
+  
+  <a href="#" class="search"><i class="fa fa-search"></i></a>
+</nav>
+
+
+ <!-- Header principal -->
+<header class="hero">
+  <img id="hero-img" src="img/mora-concierto.jpg" alt="Mora en concierto">
+  <div class="hero-content">
+    <h1>MORA BLOG</h1>
+    <h6>Todo sobre la música y vida de Mora</h6> 
+    <button onclick="toggleModal('contacto')">CONTACTO</button>
+  </div>
+</header> 
+
+<script>
+  // Lista de imágenes del carrusel
+  const heroImages = [
+    "img/mora-concierto.jpg",
+    "img/MORA.jpg",
+    "img/mora-estudio.jpg",
+    "img/mora_concierto1.jpg",
+    "img/mora-3.jpg"
+  ];
+
+  let currentImage = 0;
+  const heroImgElement = document.getElementById("hero-img");
+
+  // Cambia la imagen cada 10 segundos
+  setInterval(() => {
+    currentImage = (currentImage + 1) % heroImages.length;
+    heroImgElement.src = heroImages[currentImage];
+  }, 10000);
+</script>
+
+  <!-- Main content -->
+  <main class="content">
+   <!-- Blog posts -->
+<section class="blog">
+
+  <article>
+    <h3>Álbum: Primer Día de Clases</h3>
+    <h5>Lanzamiento <span>2021</span></h5>
+    <img src="img/primer-dia-de-clases.jpg" alt="Álbum Primer Día de Clases">
+    <p>El álbum debut de Mora, donde comenzó a definir su estilo único y captar la atención de la escena urbana.</p>
+    <div class="actions">
+      <button onclick="likeFunction(this)"><i class="fa fa-thumbs-up"></i> Me gusta</button>
+      <button onclick="toggleComments('coment1')">Comentarios <span>0</span></button>
+    </div>
+    <div id="coment1" class="comments"></div>
+  </article>
+
+  <article>
+    <h3>Álbum: Microdosis</h3>
+    <h5>Lanzamiento <span>2022</span></h5>
+    <img src="img/microdosis.jpg" alt="Álbum Microdosis">
+    <p>Con una mezcla de sonidos experimentales y urbanos, "Microdosis" consolidó a Mora como un artista innovador.</p>
+    <div class="actions">
+      <button onclick="likeFunction(this)"><i class="fa fa-thumbs-up"></i> Me gusta</button>
+      <button onclick="toggleComments('coment2')">Comentarios <span>0</span></button>
+    </div>
+    <div id="coment2" class="comments"></div>
+  </article>
+
+  <article>
+    <h3>Álbum: Paraíso</h3>
+    <h5>Lanzamiento <span>2022</span></h5>
+    <img src="img/paraiso.jpg" alt="Álbum Paraíso">
+    <p>"Paraíso" muestra la evolución de Mora con colaboraciones y letras más profundas que conectan con sus seguidores.</p>
+    <div class="actions">
+      <button onclick="likeFunction(this)"><i class="fa fa-thumbs-up"></i> Me gusta</button>
+      <button onclick="toggleComments('coment3')">Comentarios <span>0</span></button>
+    </div>
+    <div id="coment3" class="comments"></div>
+  </article>
+
+  <article>
+    <h3>Álbum: Estrella</h3>
+    <h5>Lanzamiento <span>2023</span></h5>
+    <img src="img/estrella.jpg" alt="Álbum Estrella">
+    <p>Con sonidos innovadores y colaboraciones internacionales, "Estrella" consolida a Mora como uno de los artistas más influyentes.</p>
+    <div class="actions">
+      <button onclick="likeFunction(this)"><i class="fa fa-thumbs-up"></i> Me gusta</button>
+      <button onclick="toggleComments('coment4')">Comentarios <span>0</span></button>
+    </div>
+    <div id="coment4" class="comments"></div>
+  </article>
+
+  <article>
+    <h3>Álbum: Lo Mismo de Siempre</h3>
+    <h5>Lanzamiento <span>2025</span></h5>
+    <img src="img/lo-mismo-de-siempre.jpg" alt="Álbum Lo Mismo de Siempre">
+    <p>El más reciente lanzamiento de Mora, con un estilo maduro y consolidando su sello personal en la música urbana.</p>
+    <div class="actions">
+      <button onclick="likeFunction(this)"><i class="fa fa-thumbs-up"></i> Me gusta</button>
+      <button onclick="toggleComments('coment5')">Comentarios <span>0</span></button>
+    </div>
+    <div id="coment5" class="comments"></div>
+  </article>
+
+</section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="card">
+        <img src="img/mora-profile.jpg" alt="Mora">
+        <h4>Mora</h4>
+        <p>Cantante y compositor puertorriqueño. Un artista urbano que fusiona reguetón, trap y pop con un estilo único.</p>
+      </div>
+
+      <div class="card">
+        <h4>Suscríbete</h4>
+        <input type="email" placeholder="Ingresa tu correo">
+        <button onclick="toggleModal('contacto')">Suscribirme</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Modal -->
+  <div id="contacto" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleModal('contacto')">&times;</span>
+      <h2>Contáctame</h2>
+      <input type="email" placeholder="Ingresa tu correo">
+      <button onclick="toggleModal('contacto')">Enviar</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <button onclick="scrollToTop()"><i class="fa fa-arrow-up"></i> Subir</button>
+    <p>©️ 2025 Mora Blog | Creado por fans de Mora</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>
